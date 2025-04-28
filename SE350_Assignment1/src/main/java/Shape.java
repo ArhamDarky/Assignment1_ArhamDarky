@@ -10,10 +10,17 @@
 public class Shape extends Matrix {
     private String name;
 
+    /**
+     * Creates a new Shape with a given name and matrix data.
+     * Validates that the matrix only contains 0s and 1s.
+     */
     public Shape(String name, int[][] data) {
-        super(data);
+        super(data); // Call Matrix constructor to initialize the matrix
         this.name = name;
 
+        /**
+         * Validate that every value in the matrix is either 0 or 1
+         */
         for (int i = 0; i < data.length; i++) {
             for (int j = 0; j < data[0].length; j++) {
                 int value = data[i][j];
@@ -23,7 +30,7 @@ public class Shape extends Matrix {
             }
         }
     }
-
+    // Returns the name of the shape.
     public String getName() {
         return name;
     }

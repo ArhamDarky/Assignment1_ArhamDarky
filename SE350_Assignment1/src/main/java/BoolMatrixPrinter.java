@@ -12,7 +12,8 @@ public class BoolMatrixPrinter extends MatrixOutlinePrinter{
     @Override
     protected String printRow(Matrix matrix, int row) {
         StringBuilder rowString = new StringBuilder();
-        int[][] data = matrix.getData();
+        int[][] data = matrix.getData(); // Get matrix data
+
 
         for (int col = 0; col < matrix.getNumCols(); col++) {
             int value = data[row][col];
